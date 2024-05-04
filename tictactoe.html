@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=qwp6bHXJ"></script>
+    
+    <script>
+        var t=1;
+        var m=0;
+        var n=0;
+        function winner()
+        {       
+            var a=document.getElementById("b1").value;
+            var b=document.getElementById("b2").value;
+            var c=document.getElementById("b3").value;
+            var d=document.getElementById("b4").value;
+            var e=document.getElementById("b5").value;
+            var f=document.getElementById("b6").value;
+            var g=document.getElementById("b7").value;
+            var h=document.getElementById("b8").value;
+            var i=document.getElementById("b9").value;
+            if((a=="*" && b=="*" && c=="*") || (d=="*" && e=="*" && f=="*") || (g=="*" && h=="*" && i=="*")){              
+                m=m+1;
+                document.getElementById("x").innerHTML=m;           
+                restart();
+                if(m==3){
+                    responsiveVoice.speak("Player 1 is winner!!!!!");
+                    restart();
+                    match();
+                }               
+            }
+            if((a=="o" && b=="o" && c=="o") || (d=="o" && e=="o" && f=="o") || (g=="o" && h=="o" && i=="o")){
+                n=n+1;
+                document.getElementById("y").innerHTML=n;  
+                restart();    
+                if(n==3){
+                    responsiveVoice.speak("Player 2 is winner!!!!!");
+                    restart(); 
+                    match();
+                }      
+            }
+            if((a=="*" && d=="*" && g=="*") || (b=="*" && e=="*" && h=="*") || (c=="*" && f=="*" && i=="*")){
+                m=m+1;
+                document.getElementById("x").innerHTML=m;
+                restart(); 
+                if(m==3){
+                    responsiveVoice.speak("Player 1 is winner!!!!!");
+                    restart();
+                    match();
+                }           
+            }
+            if((a=="o" && d=="o" && g=="o") || (b=="o" && e=="o" && h=="o") || (c=="o" && f=="o" && i=="o")){                
+                n=n+1;
+                document.getElementById("y").innerHTML=n;
+                  
+                restart();
+                if(n==3){
+                    responsiveVoice.speak("Player 2 is winner!!!!!");
+                    restart();
+                    match();
+                }           
+            }
+            if((a=="*" && e=="*" && i=="*") || (c=="*" && e=="*" && g=="*")){               
+                m=m+1;
+                document.getElementById("x").innerHTML=m;
+                restart(); 
+                if(m==3){
+                    responsiveVoice.speak("Player 1 is winner!!!!!");
+                    restart();
+                    match();
+                }           
+            }
+            if((a=="o" && e=="o" && i=="o") || (c=="o" && e=="o" && g=="o")){  
+                n=n+1;
+                document.getElementById("y").innerHTML=n;
+                restart(); 
+                if(n==3){
+                    responsiveVoice.speak("Player 2 is winner!!!!!");
+                    restart();
+                    match();
+                }         
+            }
+            if(t==10){
+                responsiveVoice.speak("Draw");
+                restart();
+            }
+        }
+        function s1(){
+if(document.getElementById("b1").value.length==0)
+{
+            if(t%2!=0){
+                responsiveVoice.speak("Player 1 turn");
+                document.getElementById("b1").value="*";              
+            }
+            else{
+                responsiveVoice.speak("Player 2 turn");
+                document.getElementById("b1").value="o";              
+            }
+            t=t+1;
+            winner();
+       }
+           }     
+        function s2(){
+            if(document.getElementById("b2").value.length==0)
+{
+            if(t%2!=0){
+                responsiveVoice.speak("Player 1 turn");
+                document.getElementById("b2").value="*";
+                
+            }
+            else{
+                responsiveVoice.speak("Player 2 turn");
+                document.getElementById("b2").value="o";
+                
+            }
+            t=t+1;
+            winner();
+        }
+    }
+    
+        function s3(){
+            if(document.getElementById("b3").value.length==0)
+{ 
+            if(t%2!=0){
+                responsiveVoice.speak("Player 1 turn");
+                document.getElementById("b3").value="*";
+            }
+            else{
+                responsiveVoice.speak("Player 2 turn");
+                document.getElementById("b3").value="o";
+            }
+            t=t+1;
+            winner();
+        }
+    }
+    
+        function s4(){
+            if(document.getElementById("b4").value.length==0)
+{
+            if(t%2!=0){
+                responsiveVoice.speak("Player 1 turn");
+                document.getElementById("b4").value="*";
+            }
+            else{
+                responsiveVoice.speak("Player 2 turn");
+                document.getElementById("b4").value="o";
+            }
+            t=t+1;
+            winner();
+        }
+    }
+   
+        function s5(){
+            if(document.getElementById("b5").value.length==0)
+{
+            if(t%2!=0){
+                responsiveVoice.speak("Player 1 turn");
+                document.getElementById("b5").value="*";
+            }
+            else{
+                responsiveVoice.speak("Player 2 turn");
+                document.getElementById("b5").value="o";
+            }
+            t=t+1;
+            winner();
+        }
+    }
+    
+        function s6(){
+            if(document.getElementById("b6").value.length==0)
+{
+            if(t%2!=0){
+                responsiveVoice.speak("Player 1 turn");
+                document.getElementById("b6").value="*";
+            }
+            else{
+                responsiveVoice.speak("Player 2 turn");
+                document.getElementById("b6").value="o";
+            }
+            t=t+1;
+            winner();
+        }
+    }
+    
+        function s7(){
+            if(document.getElementById("b7").value.length==0)
+{
+            if(t%2!=0){
+                responsiveVoice.speak("Player 1 turn");
+                document.getElementById("b7").value="*";
+            }
+            else{
+                responsiveVoice.speak("Player 2 turn");
+                document.getElementById("b7").value="o";
+            }
+            t=t+1;
+            winner();
+        }
+    }
+    
+        function s8(){
+            if(document.getElementById("b8").value.length==0)
+{
+            if(t%2!=0){
+                responsiveVoice.speak("Player 1 turn");
+                document.getElementById("b8").value="*";
+            }
+            else{
+                responsiveVoice.speak("Player 2 turn");
+                document.getElementById("b8").value="o";
+            }
+            t=t+1;
+            winner();
+        }
+    }
+    
+        function s9(){
+            if(document.getElementById("b9").value.length==0)
+{
+            if(t%2!=0){
+                responsiveVoice.speak("Player 1 turn");
+                document.getElementById("b9").value="*";
+            }
+            else{
+                responsiveVoice.speak("Player 2 turn");
+                document.getElementById("b9").value="o";
+            }
+            t=t+1;
+            winner();
+        }
+    }
+    function restart(){
+        document.getElementById("b1").value="";
+        document.getElementById("b2").value="";
+        document.getElementById("b3").value="";
+        document.getElementById("b4").value="";
+        document.getElementById("b5").value="";
+        document.getElementById("b6").value="";
+        document.getElementById("b7").value="";
+        document.getElementById("b8").value="";
+        document.getElementById("b9").value="";
+        t=1;
+    }
+    function match(){
+        document.getElementById("x").innerHTML="";
+        document.getElementById("y").innerHTML="";
+        m=0;
+        n=0;
+        document.getElementById("main").style.visibility="hidden";
+    
+        document.getElementById("start").style.visibility="visible";
+    }
+
+    function start()
+    {
+        
+    document.getElementById("main").style.visibility="visible";
+    
+    document.getElementById("start").style.visibility="hidden";
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="start" id="start" onclick="start()">
+   
+   <div id="main">
+    <table align="center" id="q">
+        <tr>
+            <td>Player 1</td>
+            <td></td>
+            <td>Player 2</td>
+        </tr>
+        <tr>
+            <td><p id="x" style="text-align: center;">0</p></td>
+            <td>
+                <input type="button" id="b1" onclick="s1()" >
+                <input type="button" id="b2" onclick="s2()" >
+                <input type="button" id="b3" onclick="s3()" ><br>
+                <input type="button" id="b4" onclick="s4()" >
+                <input type="button" id="b5" onclick="s5()" >
+                <input type="button" id="b6" onclick="s6()" ><br>
+                <input type="button" id="b7" onclick="s7()" >
+                <input type="button" id="b8" onclick="s8()" >
+                <input type="button" id="b9" onclick="s9()" >
+            </td>
+            <td><p id="y" style="text-align: center;">0</p></td>
+        </tr>
+    </table>
+</div>
+<script>
+    document.getElementById("main").style.visibility="hidden";
+</script>
+</body>
+</html>
